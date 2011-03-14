@@ -5,7 +5,6 @@
 ;;; Backup & Autosave
 (setq backup-inhibited t)
 (setq delete-auto-save-files t)
-(setq auto-save-list-file-prefix "~/.autosave/.saves-")
 
 
 ;;; C-h <-> DEL
@@ -18,7 +17,8 @@
 
 ;;; Hide menu bar and tool bar
 (menu-bar-mode -1)
-(tool-bar-mode -1)
+(and (eq window-system 'mac)
+     (tool-bar-mode -1))
 
 
 ;;; Turn blinking cursor mode off
