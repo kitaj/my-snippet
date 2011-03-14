@@ -8,6 +8,7 @@ export PERL5LIB=/Users/kita/.cpan/perl/lib/perl5:/Users/kita/.cpan/perl/lib/perl
 # alias
 alias ls='ls -F'
 alias ll='ls -lg'
+alias la='ls -a'
 alias lla='ll -a'
 
 # vars
