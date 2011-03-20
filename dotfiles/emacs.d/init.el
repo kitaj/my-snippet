@@ -1,3 +1,10 @@
+;;; append to load-path
+(setq load-path (append
+                 '("~/.emacs.d"
+                   "~/.emacs.d/packages")
+                 load-path))
+
+
 ;;; Locale
 (set-locale-environment (or (getenv "LANG")
 			    "ja_JP.UTF-8"))
@@ -102,3 +109,9 @@
 (add-to-list 'load-path (expand-file-name "~/Documents/Emacsen/apel"))
 (add-to-list 'load-path (expand-file-name "~/Documents/tDiary/contrib/util/tdiary-mode"))
 (autoload 'tdiary-replace "tdiary-mode" "tDiary mode" t)
+
+
+(load "config/builtins")
+(load "config/packages")
+
+;(package-install 'emacswiki "grep-edit.el" 'grep-edit)
