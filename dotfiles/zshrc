@@ -37,6 +37,6 @@ zstyle :compinstall filename '/Users/kita/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-source ~/.cinderella.profile
+[ -r ~/.cinderella.profile ] && source ~/.cinderella.profile
 
-eval `keychain -q --eval id_dsa`
+[ -r ~/.ssh/id_dsa ] && eval `keychain -q --eval id_dsa`
