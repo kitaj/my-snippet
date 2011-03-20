@@ -47,11 +47,6 @@
 (column-number-mode t)
 
 
-;;; Automatically save place in each file
-(require 'saveplace)
-(setq-default save-place t)
-
-
 ;;; Kill line and newline
 (setq kill-whole-line t)
 (setq require-final-newline t)
@@ -75,34 +70,8 @@
 (auto-compression-mode t)
 
 
-;;; dired
-(add-hook 'dired-load-hook
-	  '(lambda ()
-	     (load "dired-x")
-	     (define-key dired-mode-map "r" 'wdired-change-to-wdired-mode)))
-(autoload 'wdired-change-to-wdired-mode "wdired")
-
-
-
-;;; Unique buffer name
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
-
-
 ;;; Battery
 (display-battery-mode t)
-
-
-;;; font-set
-(if (eq window-system 'mac)
-    (progn
-      (require 'carbon-font)
-      (fixed-width-set-fontset 'hiramaru 12)))
-
-(setq default-frame-alist
-       (append '((active-alpha . 1.00)
-		 (inactive-alpha . 0.80))
-               default-frame-alist))
 
 
 ;;; tDiary
