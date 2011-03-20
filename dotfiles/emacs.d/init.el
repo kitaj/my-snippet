@@ -110,8 +110,6 @@
 (add-to-list 'load-path (expand-file-name "~/Documents/tDiary/contrib/util/tdiary-mode"))
 (autoload 'tdiary-replace "tdiary-mode" "tDiary mode" t)
 
-
+(load "config/locals")
 (load "config/builtins")
 (load "config/packages")
-
-;(package-install 'emacswiki "grep-edit.el" 'grep-edit)
